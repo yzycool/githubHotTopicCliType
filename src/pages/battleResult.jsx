@@ -17,8 +17,6 @@ function BattleResult() {
     const userName2 = searchParams.get('personTwo')
     const person1 = await fetchData(baseUrl, `/${userName1}`)
     const person2 = await fetchData(baseUrl, `/${userName2}`)
-    // 假设比较条件为 userInfo1.name 和 userInfo2.name 是否相等
-    console.log(person1.followers, person2.followers)
     if (person1.followers >= person2.followers) {
       setUserInfo({
         1: person1,
