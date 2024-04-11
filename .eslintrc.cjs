@@ -1,21 +1,19 @@
-module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
-  ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+module.export = {
+  parser: 'babel-eslint',
+  extends: ['airbnb', 'prettier'],
+  env: {
+    browser: true,
+    es6: true,
+  },
   rules: {
-    'react/jsx-no-target-blank': 'off',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    // 自定义规则
+    'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
+    'react/prop-types': 0,
+    'no-console': 0,
+    'react/perfer-stateless-function': 0,
+    'react/no-array-index-key': 0,
+    'react/a11y/anchor-is-valid': 0,
+    'react/destructuring-assignment': 0,
+    'react/jsx-one-expression-per-line': 0,
   },
 }
