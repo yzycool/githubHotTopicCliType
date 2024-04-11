@@ -1,0 +1,36 @@
+.battle-box {
+  text-align: center;
+}
+.battle-process {
+  display: flex;
+  padding: 40px 20%;
+  justify-content: space-around;
+  div {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    padding: 14px;
+    background-color: red;
+  }
+}
+.battle-operate {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  .battle-input-box {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    padding: 14px;
+  }
+  .battle-button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.battle-input-box {
+    // display: flex;
+}
+.battle-button {
+}
