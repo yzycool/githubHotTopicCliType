@@ -1,10 +1,10 @@
-// import { useState } from 'react'
+import { lazy } from 'react'
 
 // import viteLogo from '/vite.svg'
 import { Route, Routes, Link, Navigate } from 'react-router-dom'
-import Popular from './pages/popular'
-import Battle from './pages/battle'
-import BattleResult from './pages/battleResult'
+const Popular = lazy(() => import('./pages/popular'))
+const Battle = lazy(() => import('./pages/battle'))
+const BattleResult = lazy(() => import('./pages/battleResult'))
 import './App.css'
 
 function App() {
