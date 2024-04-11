@@ -1,10 +1,8 @@
 // api.js
 
-const BASE_URL = 'https://api.github.com/search'
-
-async function fetchData(url, options = {}) {
+async function fetchData(baseUrl, url, options = {}) {
   try {
-    const response = await fetch(`${BASE_URL}${url}`, options)
+    const response = await fetch(`${baseUrl}${url}`, options)
     if (!response.ok) {
       alert(`HTTP error! status: ${response.status}`)
       throw new Error(`HTTP error! status: ${response.status}`)

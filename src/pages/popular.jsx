@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import fetchData from '@/until/fetch'
 import './popular.scss'
 import 'lazysizes'
-
+const baseUrl = 'https://api.github.com/search'
 const NewsNav = ({ listenUrlChange, currentIndex }) => {
   const handleItemClick = index => {
     listenUrlChange(index)
@@ -108,7 +108,7 @@ const Popular = () => {
   const fetchDataFun = async (pageNumber = 1, index = currentIndex) => {
     try {
       setLoading(true)
-      const response = await fetchData(`${url[index]}&per_page=10&page=${pageNumber}`)
+      const response = await fetchData(baseUrl, `${url[index]}&per_page=10&page=${pageNumber}`)
       const newData = [...allData[index].list, ...response.items]
       const newAllData = { ...allData, [index]: { list: newData, pageNumber } }
       setAllData(newAllData)
