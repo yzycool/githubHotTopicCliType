@@ -11,4 +11,13 @@ export default defineConfig({
       // 添加其他样式文件夹的别名
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `[name].[hash].js`, // 入口文件名
+        chunkFileNames: `[name].[hash].js`, // 代码分割文件名
+        assetFileNames: `[name].[hash].[ext]`, // 静态资源文件名
+      },
+    },
+  },
 })
